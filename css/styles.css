@@ -664,7 +664,7 @@ a, u {
 .noa
 {
     text-decoration: none; /* Removes underline */
-    color: inherit;
+    color: white;
 }
 
 .footer {
