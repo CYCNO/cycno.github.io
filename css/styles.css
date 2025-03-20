@@ -663,7 +663,7 @@ a, u {
 
 .noa
 {
-    text-decoration: none; /* Removes underline */
+    text-decoration: none;
     color: white;
 }
 
