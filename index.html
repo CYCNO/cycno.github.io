@@ -1,242 +1,151 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CYCNO - Portofolio</title>
-        <link rel="stylesheet" href="css/styles.css" />
-    </head>
-    <body>
-        <div class="container">
-            <!-- Portfolio Section -->
-            <div class="section">
-                <div class="portfolio-container">
-                    <div class="corner-decoration top-right">/</div>
-                    <div class="corner-decoration bottom-right">/</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/png" href="images/logos/cycno.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CYCNO | random.guy() </title>
+    <script src="tailwind.js"></script>
+    <link rel="stylesheet" href="styles/torch.css">
+  </head>
+  <body class="p-0 m-0 overflow-x-hidden bg-[#FCF9EA]">
+    <div id="torch" class="inset-0"></div>
+    <section class="relative overflow-hidden font-poppins">
+      <h1
+        class="select-none absolute top-[40%] left-[17%] md:top-[37%] lg:top-[60%] lg:left-[10%] z-50 font-light text-[min(calc((85vw-16px)*0.231),343px)] tracking-[-0.02em] leading-none bg-[url(/images/cat.jpg)] bg-clip-text brightness-[60%] text-transparent grayscale-[100%] contrast-200"
+      >
+        CYC<span class="text-black">NO</span>
+      </h1>
 
-                    <div class="x-pattern">× × × × ×</div>
-                    <div class="x-pattern">× × × × ×</div>
+      <div class="flex flex-col-reverse lg:flex-row h-screen">
+        <!-- Left image -->
+        <img
+          draggable="false"
+          class="select-none shadow-inner-custom w-full lg:w-1/2 h-1/2 lg:h-full object-cover z-20"
+          src="images/cat.jpg"
+          alt=""
+        />
 
-                    <h1 class="portfolio-title">PORTFOLIO</h1>
+        <!-- Right side -->
+        <div class="w-full lg:w-1/2 relative bg-[#fdf9e6]">
+          <!-- Yellow Circles -->
+          <div
+            class="absolute top-1/2 left-1/2 lg:top-1/2 lg:left-0 w-[60vw] h-[60vw] lg:w-[80vh] lg:h-[80vh] rounded-full -translate-x-1/2 lg:-translate-x-2/3 -translate-y-1/2 bg-yellow-300 opacity-70"
+          ></div>
+          <div
+            class="absolute top-1/2 left-1/2 lg:left-0 w-[100vw] h-[100vw] ms: lg:w-[150vh] lg:h-[150vh] rounded-full -translate-x-1/2 lg:-translate-x-2/3 -translate-y-1/2 border-[2px] lg:border-[3px] border-yellow-300"
+          ></div>
+          <div
+            class="absolute top-1/2 left-1/2 lg:left-0 h-[160vw] w-[160vw] sm:h-[120vw] lg:w-[250vh] lg:h-[200vh] rounded-full -translate-x-1/2 lg:-translate-x-2/3 -translate-y-1/2 border-[2px] lg:border-[3px] border-yellow-300"
+          ></div>
 
-                    <div class="year-range">
-                        <span>2020</span>
-                        <div class="divider"></div>
-                        <span>2025</span>
-                    </div>
+          <!-- Light bulb button -->
+          <button
+            class="absolute top-[4.5%] right-[8vw] sm:right-[3vw] md:right-[4vw]"
+            onclick="lightOn()"
+          >
+            <img
+              src="images/bulb.png"
+              width="28"
+              class="hover:opacity-80 transition"
+              alt="Bulb icon"
+            />
+          </button>
 
-                    <div class="scroll-indicator">
-                        <span>Scroll Down</span>
-                        <div class="scroll-arrow">↓</div>
-                    </div>
-                </div>
-            </div>
+          <!-- Intro text -->
+          <h1
+            class="absolute font-medium text-[3vw] md:text-[2vw] lg:text-[1.2vw] w-4/5 md:w-3/5 bottom-[30vh] lg:top-[30vh] left-[5%]"
+          >
+            I am a web and game developer and sometimes I do Graphic Designing
+            for fun.
+          </h1>
 
-            <!-- About Me Section -->
-            <div class="section">
-                <div class="about-me-container">
-                    <div class="about-header">
-                        <div class="dot red"></div>
-                        <div class="dot yellow"></div>
-                        <div class="dot green"></div>
-                        <span
-                            style="
-                                margin-left: 12px;
-                                color: #aaa;
-                                font-size: 14px;
-                            "
-                            >about-me</span
-                        >
-                    </div>
-
-                    <div class="x-pattern-about">× × × × × ×</div>
-                    <div class="x-pattern-about" style="top: 40px">
-                        × × × × × ×
-                    </div>
-
-                    <div class="profile-section">
-                        <img
-                            src="https://avatars.githubusercontent.com/u/90704569?v=4"
-                            alt="Profile Photo"
-                            class="profile-image"
-                        />
-                    </div>
-
-                    <div class="info-section">
-                        <h2 class="about-me-title">ABOUT ME</h2>
-                        <h3 class="name">CYCNO</h3>
-
-                        <p class="about-me-text">
-                            I am a developer and editor and passionate in ai and
-                            web development, I also do content creation in a
-                            mean time, Sometime I create Games too
-                        </p>
-
-                        <div class="contact-section">
-                            <h4 class="contact-title">Contact me</h4>
-                            <div class="contact-items">
-                                <div class="contact-item">
-                                    <div class="contact-icon">✉️</div>
-                                    <span
-                                        ><a
-                                            class="noa"
-                                            href="mailto:itest7416@gmail.com"
-                                            target="_blank"
-                                            >Mail Me</a
-                                        ></span
-                                    >
-                                </div>
-                                <div class="contact-item">
-                                    <div class="contact-icon">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 64 64"
-                                            width="24"
-                                            height="24"
-                                        >
-                                            <path
-                                                fill="#181717"
-                                                d="M32 0C14.326 0 0 14.326 0 32c0 14.248 9.197 26.292 22.01 30.54 1.607.296 2.19-.698 2.19-1.558 0-.769-.028-3.028-.042-5.444-8.99 1.99-10.87-4.337-10.87-4.337-1.462-3.717-3.578-4.71-3.578-4.71-2.924-2.007.221-1.969.221-1.969 3.23.226 4.937 3.315 4.937 3.315 2.868 4.917 7.518 3.495 9.351 2.668.292-2.078 1.125-3.495 2.037-4.297-7.054-.804-14.451-3.527-14.451-15.654 0-3.452 1.232-6.281 3.272-8.495-0.33-.806-1.418-4.071 0.31-8.491 0 0 2.646-.85 8.746 3.23 2.542-.704 5.258-1.052 7.98-1.06 2.716.008 5.438.352 8.024 1.048 6.084-4.081 8.735-3.231 8.735-3.231 1.736 4.42 0.64 7.685 0.31 8.491 2.042 2.214 3.272 5.043 3.272 8.495 0 12.13-7.416 14.853-14.478 15.654 1.153 1.01 2.161 3.01 2.161 6.085 0 4.392-.041 7.939-.041 8.992 0 .864.576 1.861 2.189 1.558C54.804 58.292 64 46.248 64 32c0-17.674-14.326-32-32-32z"
-                                            />
-                                        </svg>
-                                    </div>
-                                    <span
-                                        ><a
-                                            class="noa"
-                                            href="https://github.com/CYCNO"
-                                            target="_blank"
-                                            >CYCNO</a
-                                        ></span
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="skills-container">
-                    <h2 class="skills-title">Skills</h2>
-                    <div class="skills-list">
-                        <div class="skill">Video Editing</div>
-                        <div class="skill">Content Creation</div>
-                        <div class="skill">Graphic Design</div>
-                        <div class="skill">UI/UX Design</div>
-                        <div class="skill">Python</div>
-                        <div class="skill">JavaScript</div>
-                        <div class="skill">Html Css</div>
-                        <div class="skill">Tailwind</div>
-                        <div class="skill">Linux</div>
-                        <div class="skill">ML</div>
-                        <div class="skill">React</div>
-                        <div class="skill">NextJS</div>
-                        <div class="skill">React Native</div>
-                        <div class="skill">Godot</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projects Section -->
-            <div class="section">
-                <div class="projects-container">
-                    <h2 class="projects-title">Projects</h2>
-
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <a
-                                href="https://github.com/CYCNO/DispoChat"
-                                target="_blank"
-                            >
-                                <img
-                                    src="https://github.com/CYCNO/DispoChat/blob/main/static/images/logo.png?raw=true"
-                                    alt="DispoChat"
-                                    class="project-image"
-                                />
-                                <div class="project-overlay">
-                                    <h3 class="project-title">Dispo Chat</h3>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="project-card">
-                            <a
-                                href="https://github.com/CYCNO/bulk-mail-sender"
-                                target="_blank"
-                            >
-                                <img
-                                    src="https://camo.githubusercontent.com/2353aef9aad02a486331617a0f1bb88c3540a71479e71a3378c5d5b59628334a/68747470733a2f2f692e696d6775722e636f6d2f73417131474b4b2e706e67"
-                                    alt="Bulk Mail Sender"
-                                    class="project-image"
-                                />
-                                <div class="project-overlay">
-                                    <h3 class="project-title">
-                                        Bulk Mail Sender
-                                    </h3>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="project-card">
-                            <a
-                                href="https://github.com/CYCNO/Simple-AI-Model"
-                                target="_blank"
-                            >
-                                <img
-                                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs7d1.scene7.com%2Fis%2Fimage%2Fdmqualcommprod%2Fon-device-generative-ai-with-sub-10-billion-parameter-models&f=1"
-                                    alt="Simple-AI-Model"
-                                    class="project-image"
-                                />
-                                <div class="project-overlay">
-                                    <h3 class="project-title">
-                                        Simple-AI-Model
-                                    </h3>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="project-card">
-                            <a
-                                href="https://github.com/CYCNO/Population-Game"
-                                target="_blank"
-                            >
-                                <img
-                                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fas1.ftcdn.net%2Fv2%2Fjpg%2F05%2F51%2F87%2F74%2F1000_F_551877498_NNdIKt96e4uEUu6O6kSEdkTJdjYASxnV.jpg&f=1"
-                                    alt="Population Game"
-                                    class="project-image"
-                                />
-                                <div class="project-overlay">
-                                    <h3 class="project-title">
-                                        Population Game
-                                    </h3>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- New Row with Cypher One -->
-                        <div class="project-card">
-                            <a
-                                href="https://github.com/CYCNO/CyPHER"
-                                target="_blank"
-                            >
-                                <img
-                                    src="https://camo.githubusercontent.com/f0a92bab3e1c20fe090626b94108ca2de780383168d3ee2b16ae771964c69231/68747470733a2f2f692e696d6775722e636f6d2f6a7a67563449462e706e67"
-                                    alt="CyPHER"
-                                    class="project-image"
-                                />
-                                <div class="project-overlay">
-                                    <h3 class="project-title">CyPHER</h3>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-footer">
-                    <h3 class="footer">
-                        &copy; 2025 CYCNO. All rights reserved.
-                    </h3>
-                </div>
-            </div>
+          <!-- Working on -->
+          <h1
+            class="absolute font-medium text-[3vw] md:text-[2vw] lg:text-[1.2vw] bottom-[20vh] lg:top-[55%] w-full pr-8 text-end mt-"
+          >
+            Currently Working on
+            <a
+              href="https://errorly.github.io"
+              target="_blank"
+              class="underline decoration-yellow-300 decoration-4 text-red-600"
+              >erroly</a
+            >
+          </h1>
         </div>
-    </body>
+      </div>
+    </section>
+
+    <section>
+      <div class="bg-black relative flex items-center flex-col">
+        <div class="pt-20 px-10 sm:px-20">
+          <h1
+            class="text-white text-5xl font-poppins font-semibold underline decoration-yellow-300"
+          >
+            Projects
+          </h1>
+          <p class="text-gray-400 py-5 w-full md:w-2/3">
+            I may not be able to update the projects everytime so please check
+            my
+            <a
+              href="https://github.com/CYCNO"
+              class="text-white underline decoration-yellow-400"
+              >github repo</a
+            >
+            for all projects related info, but I will try my best to make sure
+            it sync with my projects
+          </p>
+        </div>
+
+        <div
+          id="projects"
+          class="justify-center py-10 sm:px-8 flex gap-8 flex-wrap overflow-x-hidden"
+        >
+          <!-- check js/projects.js for what is going on here -->
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#FCF9EA]">
+      <div class="pt-20 px-10 sm:px-20 h-full">
+        <h1
+          class="text-black text-5xl font-poppins font-semibold underline decoration-yellow-300"
+        >
+          Contacts
+        </h1>
+        <div
+          id="contacts"
+          class="flex items-center justify-center h-full gap-10 lg:gap-10 my-20 flex-wrap"
+        >
+          
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="flex items-center justify-center p-3">
+        <h1 class="text-gray-800 font-poppins text-center">
+          &copy;
+          <!-- this will just output the current year -->
+          <span id="year">
+            <script>
+              document
+                .getElementById("year")
+                .appendChild(document.createTextNode(new Date().getFullYear()));
+            </script>
+          </span>
+          CYCNO - made by human for human | all logos by
+          <a href="https://icons8.com/" class="no-underline">icons8</a>
+        </h1>
+      </div>
+    </footer>
+    <script src="js/torch.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/contacts.js"></script>
+  </body>
 </html>

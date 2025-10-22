@@ -1,9 +1,9 @@
-# A Minimalistic Website
+After ignoring for lot of time, i finally decided to make my own website from scratch, And finally did it, everything is here done by me, no ai or something, to be honest it was not that hard, just time consuming but it was worth it.
 
-Website - https://cycno.is-a.dev
+check out the website from [here](https://cycno.is-a.dev)
 
-TODO:
+and feel free to use any part of the code in your projects, credit is not mandatory
 
-- Make it responsive
-
-<img alt="Website" src="https://img.shields.io/website?url=https%3A%2F%2Fcycno.is-a.dev">
+#### TODOs
+- [ ] Add Skills and Blog Sections Too
+- [ ] Add color customization

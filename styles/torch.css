@@ -1,0 +1,11 @@
+#torch {
+    backdrop-filter: brightness(0);
+    mask-image: radial-gradient(
+        circle 150px at 0 0,
+        transparent 0%,
+        black 100%
+    );
+    mask-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 9999;
+}
