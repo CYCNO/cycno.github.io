@@ -1,5 +1,12 @@
 // first create a object to store all the project data
 const projectsData = {
+  sortingVisualizer: {
+    name: "Sorting Visualizer",
+    img: "../images/projects/sort-visualizer.png",
+    desc: "Visualize the Sorting Algorithm Built in js with no lib",
+    github: "CYCNO/sorting-visualiser",
+    url: "https://cycno.is-a.dev/sorting-visualiser/"
+  },
   laukey: {
     name: "Laukey",
     img: "https://errorly.github.io/laukey_applications/laukeypreview.png",
@@ -12,7 +19,6 @@ const projectsData = {
     img: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgethired.id%2Fblog%2Fwp-content%2Fuploads%2F2022%2F09%2Ftips-belajar-coding-pemula.jpg&f=1&nofb=1&ipt=6ef9b0c6e0cc6f9bc6838e0858a805131ec28c7d9bae123dd24ae4149fe6502b",
     desc: "A Simple yet Powerful Tool to manage your todos",
     github: "CYCNO/wodo",
-
   },
   somecode: {
     name: "SomeCode",
