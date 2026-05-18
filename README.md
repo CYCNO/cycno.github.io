@@ -5,5 +5,5 @@ check out the website from [here](https://cycno.is-a.dev)
 and feel free to use any part of the code in your projects, credit is not mandatory
 
 #### TODOs
+- [x] Blog Section
 - [ ] Add Skills and Blog Sections Too
-- [ ] Add color customization
