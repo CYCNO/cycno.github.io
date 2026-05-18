@@ -1,8 +1,14 @@
 // first create a object to store all the project data
 const projectsData = {
+  logicGateModel: {
+    name: "Logic Gates Model",
+    img: "https://github.com/CYCNO/Logic-Gate-Regression/raw/main/images/single-neuron.webp",
+    desc: "A Machine Learning Project that tries to predict logic gate, created in pure python from scratch",
+    github: "CYCNO/Logic-Gate-Regression",
+  },
   sortingVisualizer: {
     name: "Sorting Visualizer",
-    img: "../images/projects/sort-visualizer.png",
+    img: "https://github.com/CYCNO/sorting-visualiser/raw/main/images/readme/ss.png", 
     desc: "Visualize the Sorting Algorithm Built in js with no lib",
     github: "CYCNO/sorting-visualiser",
     url: "https://cycno.is-a.dev/sorting-visualiser/"
@@ -42,7 +48,7 @@ const projectsData = {
   },
   bms: {
     name: "Bulk Mail Sender",
-    img: "https://camo.githubusercontent.com/2353aef9aad02a486331617a0f1bb88c3540a71479e71a3378c5d5b59628334a/68747470733a2f2f692e696d6775722e636f6d2f73417131474b4b2e706e67",
+    img: "https://camo.githubusercontent.com/5b0765d852e721284a5318b21cdfd9aee0a2d5e4330b9ccfa29035485b0fe091/68747470733a2f2f692e696d6775722e636f6d2f73417131474b4b2e706e67",
     desc: "Send Mail In Bulk In Gmail Using Python With Full Customization And No Limit",
     github:"CYCNO/bulk-mail-sender"
   }
@@ -58,6 +64,7 @@ Object.entries(projectsData).forEach(([k, v]) => {
     <div
         class="bg-[#313131] hover:bg-[#313131c3] transition duration-500 ease-in-out hover:border-[#afb3bb] w-[350px] h-[300px] rounded-md border border-[#727c90] overflow-hidden"
         >
+        <a href="${v.url || `https://github.com/${v.github}`}" target="_blank">
         <img
             class="h-[50%] object-cover w-full"
             src="${v.img}"
@@ -76,6 +83,7 @@ Object.entries(projectsData).forEach(([k, v]) => {
                 ${v.url ? `<a href="${v.url}"><img height=50 widht=50 src="images/logos/website.png" alt="" /></a>` : ""}
             </div>
         </div>
+        </a>
     </div>
     `;
 });
