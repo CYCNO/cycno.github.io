@@ -1,10 +1,10 @@
 // first create a object to store all the project data
 const projectsData = {
-  logicGateModel: {
-    name: "Logic Gates Model",
-    img: "https://github.com/CYCNO/Logic-Gate-Regression/raw/main/images/single-neuron.webp",
-    desc: "A Machine Learning Project that tries to predict logic gate, created in pure python from scratch",
-    github: "CYCNO/Logic-Gate-Regression",
+  scheem: {
+    name: "Scheem",
+    img: "https://upload.wikimedia.org/wikipedia/commons/5/58/Two-layer_feedforward_artificial_neural_network.png",
+    desc: "Scheem is a lightweight, from-scratch neural network framework built entirely in Python without using any external library",
+    github: "CYCNO/Scheem",
   },
   bintoo: {
     name: "Bintoo",
