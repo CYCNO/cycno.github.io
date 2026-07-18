@@ -1,5 +1,11 @@
 // first create a object to store all the project data
 const projectsData = {
+  mnistFromScratch: {
+    name: "Mnist Model From Scratch",
+    img: "https://upload.wikimedia.org/wikipedia/commons/b/b1/MNIST_dataset_example.png",
+    desc: "A hand written number prediction model written from scratch in python that uses mnist dataset",
+    github: "CYCNO/Mnist-From-Scratch",
+  },
   scheem: {
     name: "Scheem",
     img: "https://upload.wikimedia.org/wikipedia/commons/5/58/Two-layer_feedforward_artificial_neural_network.png",
