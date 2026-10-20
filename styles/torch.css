@@ -9,3 +9,7 @@
     pointer-events: none;
     z-index: 9999;
 }
+
+#projects {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 350px));
+}

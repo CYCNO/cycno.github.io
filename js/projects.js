@@ -6,6 +6,8 @@ const projectsData = {
     desc: "A hand written number prediction model written from scratch in python that uses mnist dataset",
     github: "CYCNO/Mnist-From-Scratch",
     tag:"ml",
+    pins: true,
+
   },
   scheem: {
     name: "Scheem",
@@ -13,6 +15,7 @@ const projectsData = {
     desc: "Scheem is a lightweight, from-scratch neural network framework built entirely in Python without using any external library",
     github: "CYCNO/Scheem",
     tag: "ml",
+    pins: true,
   },
   supervisedFromScratch: {
     name: "Supervised From Scratch",
@@ -20,6 +23,7 @@ const projectsData = {
     desc: "Almost all the relevant supervise models built from scratch using math",
     github: "CYCNO/Supervise-Models-From-Scratch",
     tag:"ml",
+    pins: true,
   },
   bintoo: {
     name: "Bintoo",
@@ -28,6 +32,7 @@ const projectsData = {
     github: "ERRORLY/bintoo-website",
     url: "https://bintoo.xyz",
     tag: "software",
+    pins: true,
   },
   laukey: {
     name: "Laukey",
@@ -35,7 +40,8 @@ const projectsData = {
     desc: "A Feature Rich Password Manager with Beutiful UI with lots of features and A Good Security For Windows And Linux",
     github: "ERRORLY/Laukey",
     url: "https://errorly.github.io/Laukey",
-    tag: "software"
+    tag: "software",
+    pins: true,
   },
   rtiRedesign: {
     name: "RTI WebRedesign",
@@ -43,7 +49,7 @@ const projectsData = {
     desc: "A Modern Redesign of Right to Information Website of India, Built for Hackathon",
     github: "CYCNO/RTI-Web-Redesign",
     url: "https://rti-web-redesign.vercel.app/",
-    tag: "software"
+    tag: "software",
   },
   wodo: {
     name: "WODO",
@@ -65,7 +71,8 @@ const projectsData = {
     img: "https://github.com/CYCNO/minimath/raw/main/image/logo.png",
     desc: "A Simple math Lib purely built in python without any external lib like math",
     github: "CYCNO/minimath",
-    tag: "utils"
+    tag: "utils",
+    pins: true,
   },
   popGame: {
     name: "Population Game",
@@ -92,18 +99,47 @@ const projectsData = {
 };
 
 const projectsContainer = document.getElementById("projects");
+const navIds = ["nav-pins", "nav-all", "nav-ml", "nav-software", "nav-utils"];
+
+function setActiveNav(activeId) {
+  navIds.forEach((id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const svg = el.querySelector("svg");
+    if (id === activeId) {
+      el.classList.remove("border-neutral-800");
+      el.classList.add("border-yellow-300");
+      if (svg) {
+        svg.classList.remove("text-neutral-400");
+        svg.classList.add("text-yellow-300");
+      }
+    } else {
+      el.classList.remove("border-yellow-300");
+      el.classList.add("border-neutral-800");
+      if (svg) {
+        svg.classList.remove("text-yellow-300");
+        svg.classList.add("text-neutral-400");
+      }
+    }
+  });
+}
 
 function refresh(tag) {
+  setActiveNav(`nav-${tag}`);
   // Clear the container
   projectsContainer.innerHTML = "";
 
   // Filter and display projects matching currentSection
   Object.values(projectsData)
-    .filter(project => tag === "all" | project.tag === tag)
+    .filter(project => {
+      if (tag === "pins") return Boolean(project.pins);
+      if (tag === "all") return true;
+      return project.tag === tag;
+    })
     .forEach(v => {
       projectsContainer.innerHTML += `
         <div
-            class="bg-[#313131] hover:bg-[#313131c3] transition duration-500 ease-in-out hover:border-[#afb3bb] w-[350px] h-[300px] rounded-md border border-[#727c90] overflow-hidden"
+            class="bg-[#313131] hover:bg-[#313131c3] transition duration-500 ease-in-out hover:border-[#afb3bb] w-[350px] max-w-full h-[300px] rounded-md border border-[#727c90] overflow-hidden"
             >
             <a href="${v.url || `https://github.com/${v.github}`}" target="_blank">
             <img
@@ -131,6 +167,10 @@ function refresh(tag) {
 }
 
 // Event listeners
+document.getElementById("nav-pins").addEventListener("click", () => {
+  refresh("pins");
+});
+
 document.getElementById("nav-all").addEventListener("click", () => {
   refresh("all");
 });
@@ -148,4 +188,4 @@ document.getElementById("nav-utils").addEventListener("click", () => {
 });
 
 // Initial render
-refresh("all");
+refresh("pins");
